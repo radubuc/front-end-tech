@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            border: 2px solid red;
+            width: 500px;
+        }
+
+        h1 {
+            border: 2px solid blue;
+        }
+
+        nav {
+            border: 2px solid orange;
+        }
+
+        fieldset {
+            width: 400px;
+            background-color: #cdcdcd;
+        }
+    </style>
+</head>
+<body>
+    <header><!-- this is a block element-->
+        <h1>Our first website</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="listsandtables.html">list and tables</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <p><h2><em>Additional text</em>This is some additional text</h2> <img src="https://media1.popsugar-assets.com/files/thumbor/fe_TEBbRM3ZlH2WR2P-pI5hbqSI/876x0:4381x3505/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2019/12/18/763/n/46902966/4759e2855dfa5f7c857892.88399573_/i/what-kind-health-problems-do-golden-retrievers-have.jpg" alt="the best dog breed ever!!!" width="400"></p>
+    <p><img src="golden.jpg" alt="second photo of golden retriever" width="300"></p>
+    <form action="">
+        
+        <label for="userEmail">Enter your email:</label><br>
+        <input type="email" name="userEmail" id="userEmail"><br><br>
+        <input type="text" name="myEmail" id="secondemail">
+        <input type="date" name="calendar" id="calendar">
+        <fieldset>
+            <label for="courses">frontend</label>
+            <input type="checkbox" name="courses" id="frontend">
+            <label for="courses">backend</label>
+            <input type="checkbox" name="courses" id="backend">
+            <label for="courses">data engineering</label>
+            <input type="checkbox" name="courses" id="dataengineering"><br><br>
+        </fieldset>
+ 
+        <label for="typeofcourse">in person</label>
+        <input type="radio" name="typeofcourse" id="inperson">
+        <label for="typeofcourse">online</label>
+        <input type="radio" name="typeofcourse" id="online"><br><br>
+        <input type="submit" value="Click me now!!!!">
+        <button type="submit">I also can submit things</button>
+    </form>
+</body>
+</html>
