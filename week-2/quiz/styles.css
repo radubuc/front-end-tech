@@ -1,0 +1,29 @@
+/* Write external CSS to style HTML as directed below.
+1. Make the entire background blue.
+2. An id of "text-2" should have red font color.
+3. Any div with a class of "box" should have 25% margins on all sides, a black, solid 1px border, with curved corners. (NOTE: make sure only div's with the class are targeted)
+4. All list items (li) should have a white background when they are hovered over.
+5. Every third row in any table should have a gray background. */
+
+body {
+    background-color: rgb(104, 187, 255);
+}
+
+#text-2 {
+    color: rgb(184, 13, 13);
+}
+
+.box {
+    margin: 25%;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+li:hover {
+    background-color: #fff;
+
+}
+
+tr:nth-child(3n) {
+    background-color: rgb(199, 199, 199);
+}
