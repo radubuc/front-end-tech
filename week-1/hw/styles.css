@@ -6,27 +6,49 @@
 body {
     background-color: #00adab;
     font-family: Arial, Helvetica, sans-serif;
-    /* color: rgb(42, 42, 42); */
     color: black;
+    scroll-behavior: smooth;
 }
 
-#top {
-    scroll-behavior: smooth; /*I know I could do this in the body selector, but I needed an ID*/
+/* #hero {
+    margin-bottom: 20px; 
+} */
+
+/* #hero a {
+    /* background-color: #00adab; 
+    pointer-events: none;
+} */
+
+nav {
+    background-color: rgb(255, 255, 255, 0.75);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 20px;
 }
 
-.nav-item {
+#ul-nav {
+    padding-inline-start: 0px;
+}
+
+.nav-item { /*This style is on the <li> in nav*/
     list-style: none;
     display: inline;
+    padding: 15px;
     
 }
 
-.nav-item:hover {
+a:hover {
     background-color: #ffd504;
+    color: black;
     
 }
 
-.nav-item:active {
-    color: #00adab;
+a:active {
+    color: #d85936;
+}
+
+a:visited {
+    color: #5f157a;
 }
 
 h1 {
@@ -45,6 +67,40 @@ h2 {
     background-color: rgb(255, 255, 255, 0.75);
     
 }
+
+p {
+    text-align: left;
+}
+
+label {
+    font-weight: 300;
+}
+
+#season1, #season2, #season3, #season4, #season5 {
+    scroll-behavior: smooth;
+}
+
+table {
+    border-collapse: collapse;
+    width: 75%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+tr:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+ } /*FINISH GRID */
 
 footer {
     margin: 10px;
