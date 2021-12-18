@@ -1,0 +1,24 @@
+PROCESS FOR INSTALLING BOOTSTRAP AND JQUERY
+Very weird, but it's only way I could get Bootstrap to work:
+
+1. Go to root of project in Git Bash.
+
+2. Install npm instance at root. Run "npm init" and follow prompts.
+
+3. Install bootstrap by running "npm i bootstrap@4.4.1".
+
+4. Install jquery dependencies. In this order, run "npm i jquery@1.9.1" then "npm i jquery".
+
+5. Install popper by running "npm i popper.js@^1.16.0". Not even sure if this part is necessary, but still do it, I guess.
+
+6. Run "npm install http-server". It will look like it was successful.
+
+7. Run "http-server". I will get the error message, "bash: http-server: command not found".
+
+8. Steps 6 and 7 don't matter because I'm using live server extension now instead, so maybe can omit. But like I said, this step is correlated with a functioning bootstrap, so do it, I guess.
+
+9. Check VSCode or File Explorer for "node_modules" folder. Make sure I can find "node_modules/bootstrap/dist/css/bootstrap.css", "node_modules/jquery/dist/jquery.js" and "node_modules/bootstrap/dist/js/bootstrap.bundle.js".
+
+10. Drop in both CSS and jquery test components from https://getbootstrap.com/docs/4.1/components/ and check in browser.
+
+11. SHOULD be good to start working now.
