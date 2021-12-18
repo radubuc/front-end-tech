@@ -1,0 +1,22 @@
+Renee Dubuc
+17 December 2021
+
+Bootstrap's grid system sounds a little misleading, because it's built with flexbox not grid, but it is fully responsive.1 It uses containers, rows, and columns. ICY you looked at Bootstrap's documentation and were like TL;DR, I'll paraphrase the main points here:
+
+Bootstrap's grids have 5 breakpoints corresponding to each of the predetermined alpha sizes for screens (XS-XL). You start with containers; they are used to center content and add horizontal padding.1 Next, rows are the wrappers, not containers. You can add up to 12 columns.1  Padding on the columns is balanced out with negative margins on the rows, which visually left-aligns the content.1 There are a number of attributes you can assign such as max container width, gutter width and nestable.1
+
+The Bootstrap docs are quite thorough, and they are very helpful if you are creating an irregular column structure.
+
+On an unrelated note, my favorite thing I learned this week is the lorem ipsum trick. If you type in lorem and a number then hit tab or enter, VSCode generates that many words of placeholder text.
+
+Ex: lorem50
+
+Note there is no space between each part. This will generate 50 words of lorem ipsum on one line. If you want line breaks or any other formatting, you must do that on your own.
+
+Have a nice week. :)
+
+
+
+
+Sources
+1 https://getbootstrap.com/docs/4.0/layout/grid/
