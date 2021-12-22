@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HW - Attempt 2</title>
+    <title>Devsign Consultation Services</title>
     <!-- Make sure bootstrap CSS is before my CSS! -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="styles.css">
@@ -64,6 +64,7 @@
         </div>
       </div> -->
 
+    <!-- Start navigation bar -->
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
         <a class="navbar-brand" href="index.html">Devsign</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -73,32 +74,87 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dev/Design Tips
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Item One</a>
-                        <a class="dropdown-item" href="#">Item Two</a>
-                        <a class="dropdown-item" href="#">Item Three</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-    
+                <li class="nav-item active">
+                  <a class="nav-link" href="tips.html">Tips</a>
+              </li>
             </ul>
         </div>
     </nav>
 
+    <!-- Start header  -->
     <img src="assets/glowing-keyboard-bg-cropped.jpg" class="img-fluid" alt="Responsive image">
     
-    <!-- <div class="test"> -->
-        <h1 class="display-1">Bridging the Gap Between <br />Development and Design</h1>
-    <!-- </div> -->
+    <h1 class="display-1">Bridging the Gap Between <br />Development and Design</h1>
+
+	<!-- Start body copy  -->
+	<div class="container">
+		<h2 class="display-2">What keeps so many good digital products from being great?</h2>
+
+		<p>It's all about the user experience. Not the easiest thing to get right. No worries: you've got amazing UX designers and developers.</p>
+		
+		<p>About that. It may not be enough. But why?</p>
+		
+		<p>For the sake of argument, let's just say your company does have the best UX design talent and development team around. At most places, designers and developers tend to work within their own silos, each doing their part to build (and launch) the best web or digital products possible.</p>
+		
+		<p>And that's where the design-development divide begins. Once design approves UX, color schemes, and the product's look and feel, their prototype gets handed off to the dev team to get things to work seamlessly. Coding limitations and time constraints often eclipse UX design preferences.</p>
+		
+		<p>When there's a lack of meaningful team interaction, much is lost in translation. If only designers and developers spoke the same language. Or simply tried to reach out to the other more often.</p>
+		
+		<p>It's not that designers and developers actively avoid cooperation. It could be a matter of internal processes. Many times, the UX design and UX development departments are physically divided across buildings (or even time zones). In any case, harmony between both disciplines is critical.</p>
+		
+		<p>Even more than you might imagine.</p>
+
+		<p class="font-italic">Excerpt from <a href="https://lucidspark.com/blog/bridging-the-gap-between-designers-and-developers" target="_blank">LucidSpark.com</a>.</p>
+
+		<h2 class="display-2">Contact us today for a free development and design consultation!</h2>
+	</div>
+
+	<!-- Start form  -->
+	<form class="container">
+		<!-- Row 1  -->
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label for="inputFirstName">First name</label>
+				<input type="text" class="form-control">
+			</div>
+			<div class="form-group col-md-6">
+				<label for="inputLastName">Last name</label>
+				<input type="text" class="form-control">
+			</div>
+		</div>
+
+		<!-- Row 2  -->
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label for="inputCompany">Company</label>
+				<input type="text" class="form-control">
+			</div>
+			<div class="form-group col-md-3">
+				<label for="inputName">Phone</label>
+				<input type="tel" class="form-control" id="inputPhone">
+			</div>
+			<div class="form-group col-md-3">
+				<label for="inputEmail4">Email</label>
+				<input type="email" class="form-control" id="inputEmail4">
+			</div>
+		</div>
+
+		<!-- CAPTCHA  -->
+		<div class="form-group">
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" id="gridCheck">
+				<label class="form-check-label" for="gridCheck">
+					I am not a robot
+				</label>
+			</div>
+		</div>
+
+		<!-- Submit  -->
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+
 
 
     <br /><br /><br /><br />
