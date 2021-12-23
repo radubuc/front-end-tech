@@ -21,16 +21,11 @@
     --light: #f8f9fa;
     --dark: #343a40; */
 
-
 body {
     background-color: #343a40;
     font-size: 1.25rem;
     color: #f8f9fa;
 }
-
-/* img {
-    margin-bottom: 50px;
-} */
 
 a {
     color: #53a6ff;
@@ -46,17 +41,6 @@ a:visited {
     color: #ff4ee2;
     text-decoration: underline;
 }
-  
-/* I don't need these 2 classes for this project but I wanted to add them so I could reference the :not psuedo class in the future  */
-/* a:not([href]) {
-    color: inherit;
-    text-decoration: none;
-}
-
-a:not([href]):hover {
-    color: inherit;
-    text-decoration: none;
-} */
 
 .navbar-brand {
     font-size: 2.5rem;
@@ -84,9 +68,7 @@ a:not([href]):hover {
     width: 100%;
     z-index: 1;
   }
-
   
-
   .display-2 {
     font-size: 2.5rem;
     color:rgb(0, 234, 255);
@@ -125,20 +107,6 @@ a:not([href]):hover {
     border-color: rgb(0, 234, 255);
   }
 
-  /* .card {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #f8f9fa;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
-  } */
-
   .accordion {
       margin-top: 15px;
   }
@@ -170,3 +138,28 @@ a:not([href]):hover {
     z-index: 1;
     
   } */
+
+/* .card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #f8f9fa;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+  } */
+
+  /* I don't need these 2 classes for this project but I wanted to add them so I could reference the :not psuedo class in the future  */
+/* a:not([href]) {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:not([href]):hover {
+    color: inherit;
+    text-decoration: none;
+} */
