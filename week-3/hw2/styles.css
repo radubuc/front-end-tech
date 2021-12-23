@@ -28,9 +28,9 @@ body {
     color: #f8f9fa;
 }
 
-img {
-    /* margin-bottom: 50px; */
-}
+/* img {
+    margin-bottom: 50px;
+} */
 
 a {
     color: #53a6ff;
@@ -85,12 +85,39 @@ a:not([href]):hover {
     z-index: 1;
   }
 
+  
+
   .display-2 {
     font-size: 2.5rem;
     color:rgb(0, 234, 255);
     margin-top: 0.75em;
     margin-bottom: 0.5em;
   }
+
+  @media (max-width: 768px) {
+	.display-1 {
+		font-size: 3rem;
+	}
+
+	.display-2 {
+		font-size: 2rem;
+	}
+
+	.hero {
+	  opacity: 0.5;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .display-1 {
+	  font-size: 2rem;
+  }
+
+  .display-2 {
+	  font-size: 1.5rem;
+  }
+}
 
   .btn-primary:hover {
     color: #343a40;
@@ -119,6 +146,8 @@ a:not([href]):hover {
   .card-body {
     color: #343a40;
   }
+
+  
 
 
 
