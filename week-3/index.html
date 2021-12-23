@@ -270,6 +270,53 @@
             </ul>
         </div>
     </nav>
+    <br /><br />
+    <div class="container">
+        <p>QUIZ SCRATCH </p>
+        
+        <p>Prompt: Assuming you have everything imported that is needed to use Bootstrap, create a responsive structure using the grid system as described below.</p>
+
+        <p>1. Template should span the entire width of the screen.</p>
+        <p>2. There should be three columns. The left and right column should each take up 25% the width of the screen when the viewport is anything larger than small. The middle column should take up the remaining 50% of the screen.</p>
+        <p>3. Inside the middle column there should be two more columns, the left column taking up 75% of the width of it's parent and the right column taking up the remaining 25% when the viewport is anything larger than small.</p>
+        <p>4.All columns should stack vertically and respond when the viewport is small.</p>
+    </div>
+    <br />
+
+    <p>My grid</p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+                width of 25% above sm breakpoint
+            </div>
+            <div class="col-sm-6">
+                width of 50%
+                <div class="row">
+                    <div class="col-md-9">
+                        width of 75%
+                    </div>
+                    <div class="col-md-3">
+                        width of 25%
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                width of 25% above sm breakpoint
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <p>From Bootstrap documentation: https://getbootstrap.com/docs/5.1/layout/columns/</p>
+    <p>The .col-* classes can also be used outside a .row to give an element a specific width. Whenever column classes are used as non direct children of a row, the paddings are omitted.</p>
+
+    <div class="col-3 bg-light p-3 border">
+        .col-3: width of 25%
+    </div>
+    <div class="col-sm-9 bg-light p-3 border">
+        .col-sm-9: width of 75% above sm breakpoint
+    </div>
+
 
     <br /><br /><br /><br />
     <script src="node_modules/jquery/dist/jquery.js"></script>

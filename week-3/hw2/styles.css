@@ -98,6 +98,28 @@ a:not([href]):hover {
     border-color: rgb(0, 234, 255);
   }
 
+  /* .card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #f8f9fa;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+  } */
+
+  .accordion {
+      margin-top: 15px;
+  }
+
+  .card-body {
+    color: #343a40;
+  }
+
 
 
 
