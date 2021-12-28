@@ -22,3 +22,5 @@ Very weird, but it's only way I could get Bootstrap to work:
 10. Drop in both CSS and jquery test components from https://getbootstrap.com/docs/4.1/components/ and check in browser.
 
 11. SHOULD be good to start working now.
+
+Note: Steps 5-7 have been omitted before and bootstrapa and jquery have run successfully.
