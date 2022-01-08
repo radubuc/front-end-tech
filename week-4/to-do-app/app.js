@@ -10,7 +10,7 @@ document.getElementById('add').addEventListener('click', () => {
     row.insertCell(1).innerHTML = `${createdDate.getFullYear()}-${createdDate.getMonth() + 1}-${createdDate.getDate()}`; //Sets value of 2nd cell, under Date Created header (yyyy-mm-dd because it's easier)
     row.insertCell(2).innerHTML = document.getElementById('new-start-date').value; //Sets value of 3rd cell, under Start Date header
     row.insertCell(3).innerHTML = document.getElementById('new-end-date').value; //Sets value of 4th cell, under Due Date header
-    let actions = row.insertCell(4); //Variable created for Actions button
+    let actions = row.insertCell(4); //Variable created for Delete button
     actions.appendChild(createDeleteButton(id++)); //Beginning of delete button, see line 19. This increments ID
     document.getElementById('new-task').value = ''; //Clears value of task field after every click of button
 
@@ -18,9 +18,9 @@ document.getElementById('add').addEventListener('click', () => {
 
 function createDeleteButton(id){
     let btn = document.createElement('button'); //Creates button
-    btn.className = 'btn btn-primary'; //Give button Bootstrap styling
-    btn.id = id; //Give button a unique ID
-    btn.innerHTML = 'Delete'; //Give HTML text to button
+    btn.className = 'btn btn-primary'; //Gives button Bootstrap styling
+    btn.id = id; //Gives button a unique ID
+    btn.innerHTML = 'Delete'; //Gives HTML text to button
     btn.onclick = () => { //Binds function to button; onclick is same as an event listener for click
         console.log(`Deleting row with ID: item-${id}`); //For testing
         let elementToDelete = document.getElementById(`item-${id}`);
