@@ -13,7 +13,6 @@ document.getElementById('add').addEventListener('click', () => {
     for (let i = 0; i < moodRadio.length; i++) {
         if (moodRadio[i].checked) {
             row.insertCell(1).innerHTML = moodRadio[i].value;
-
         }
     }
     
@@ -23,7 +22,6 @@ document.getElementById('add').addEventListener('click', () => {
     for (let i = 0; i < topicCheckbox.length; i++) {
         if (topicCheckbox[i].checked) {
             topicCheckboxValue+=topicCheckbox[i].value + ", ";
-
         }
     }
     let tcv = topicCheckboxValue.slice(0, topicCheckboxValue.length - 2);
@@ -35,7 +33,6 @@ document.getElementById('add').addEventListener('click', () => {
     for (let i = 0; i < emotionsCheckbox.length; i++) {
         if (emotionsCheckbox[i].checked) {
             emotionsCheckboxValue+=emotionsCheckbox[i].value + ", ";
-
         }
     }
     let ecv = emotionsCheckboxValue.slice(0, emotionsCheckboxValue.length - 2);
@@ -50,7 +47,6 @@ document.getElementById('add').addEventListener('click', () => {
     for (let i = 0; i < distortionsCheckbox.length; i++) {
         if (distortionsCheckbox[i].checked) {
             distortionsCheckboxValue+=distortionsCheckbox[i].value + ", ";
-
         }
     }
     let dcv = distortionsCheckboxValue.slice(0, distortionsCheckboxValue.length - 2);
@@ -61,20 +57,13 @@ document.getElementById('add').addEventListener('click', () => {
     for (let i = 0; i < feelingsRadio.length; i++) {
         if (feelingsRadio[i].checked) {
             row.insertCell(6).innerHTML = feelingsRadio[i].value;
-
         }
     }
-
-
-
-
 
     let actions = row.insertCell(7); //Variable created for Delete button
     actions.appendChild(createDeleteButton(id++)); //Beginning of delete button. This increments ID
     document.getElementById('date').value = ''; //Clears value of task field after every click of button
     //Why aren't lines 23-25 working?
-
-
 });
 
 function createDeleteButton(id){
