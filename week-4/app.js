@@ -1,4 +1,5 @@
 // FINDING ELEMENTS IN THE DOM VIDEO NOTES
+console.log(`VIDEO NOTES \n`);
 
 //How to find elements in the DOM
 //Method 1: Using getElementById()
@@ -67,4 +68,15 @@ document.getElementById('addInput').addEventListener('click', () => { //Makes ev
 });
 
 
+//QUIZ SCRATCH
+//Based off of addInput function starting on line 61
+console.log(`\n QUIZ SCRATCH \n`);
 
+document.getElementById('p-button').addEventListener('click', () => {
+    var paragraphDiv = document.getElementById('p-div');
+    var newParagraph = document.createElement('p');
+    newParagraph.innerHTML = document.getElementById('p-input').value;
+    newParagraph.setAttribute('id', id++);
+    paragraphDiv.appendChild(newParagraph);
+    document.getElementById('p-input').value = '';
+});
