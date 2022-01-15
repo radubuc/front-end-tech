@@ -31,7 +31,7 @@ $(function() { //The new document.ready()
     //     // console.log(evt) //for testing
     //     if (player % 2 == 0) {
     //         // evt.target.innerText = "X"; //How can I add an image instead of an X?
-    //         // evt.target.innerHTML = <img src="../hw/Rick-Sanchez-face-228x300.png" class="X">rick</img>; //Try innerHTML instead of innerText. Maybe check animate doc -- api.jquery.com/animate Give image a class so logic can check by class for winner
+    //         // evt.target.innerHTML = <img src="../hw/x-rick.png" class="X">rick</img>; //Try innerHTML instead of innerText. Maybe check animate doc -- api.jquery.com/animate Give image a class so logic can check by class for winner
     //         evt.target.style.fontSize = "30px";
     //         player++;
     //     }
