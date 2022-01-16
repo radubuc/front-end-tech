@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Rick Tac Toe</title>
+</head>
+<body>
+    <div class="hero">
+        <img src="tinified/blips-chitz-bg.png"  class="img-fluid"/>
+    </div>
+
+    <div class="overlay">
+        <div class="container">
+            <div class="row">
+                <h1>Rick Tac Toe</h1>
+            </div>
+    
+            <div class="row">
+                <h2>Listen up, my Glip-Glops! Here are the rules:</h2>
+            </div>
+    
+            <div class="row">
+                Take turns claiming spaces on the board by clicking squares. Or don't. I don't care.
+            </div>
+    
+            <div class="row">
+                Rick is an X, Morty is an O. First one to get three in a row wins.
+            </div>
+    
+            <div class="row">
+                Now I'm gonna go work on stuff in the garage. Don't bother me.
+            </div>
+    
+            <div class="row">
+                <i>*Burps</i>
+            </div>
+        </div>
+        <br /><br />
+    
+        <!-- Game board option 1 -->
+        <div class="container" id="main-board">
+            <div class="row">
+                <div class="col-3" id="1"> 
+                    &nbsp;
+                </div>
+                <div class="col-3" id="2">
+                    &nbsp;
+                </div>
+                <div class="col-3" id="3">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3" id="4">
+                    &nbsp;
+                </div>
+                <div class="col-3" id="5">
+                    &nbsp;
+                </div>
+                <div class="col-3" id="6">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3" id="7">
+                    &nbsp;
+                </div>
+                <div class="col-3" id="8">
+                    &nbsp;
+                </div>
+                <div class="col-3"id="9">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <!-- Game board option 2 -->
+        <!-- <div class="container">
+            <table>
+                <tr>
+                    <td id="1">Box 1</td>
+                    <td id="2">Box 2</td>
+                    <td id="3">Box 3</td>
+                </tr>
+                <tr>
+                    <td id="4">Box 4</td>
+                    <td id="5">Box 5</td>
+                    <td id="6">Box 6</td>
+                </tr>
+                <tr>
+                    <td id="7">Box 7</td>
+                    <td id="8">Box 8</td>
+                    <td id="9">Box 9</td>
+                </tr>
+            </table>
+        </div> -->
+    </div>
+
+    
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

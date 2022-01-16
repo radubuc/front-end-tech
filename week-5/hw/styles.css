@@ -1,0 +1,72 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    /* text align center is not doing what I want*/
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: semi-bold;
+    font-size: 1.5rem;
+}
+
+.hero {
+    opacity: 0.75;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Use rgba instead of hex value with a separate opacity attribute because it's messing up marker images*/
+    width: 65%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    display: block;
+}
+
+/* How do I get contents of container centered? */
+.container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+
+
+/* Game board option 1 */
+.col-3 {
+    min-height: 165px;
+    border: 1px solid black;
+}
+
+/* Game board option 2 */
+table {
+    border-collapse: collapse;
+    width: 100%;  
+    /* border: 1px solid black; */
+    z-index: 1;
+}
+
+tr {
+    border: 1px solid black;
+} /* How to get vertical borders? */
+
+.X, .O {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+

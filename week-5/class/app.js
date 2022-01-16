@@ -25,21 +25,21 @@ $(function() { //The new document.ready()
 
 
     //jquery version for adding event listeners
-    // player = 0;
-    // // let divs = $('.col-2');
-    // $('.container').on("click", (evt) => { //api.jquery.com/on
-    //     // console.log(evt) //for testing
-    //     if (player % 2 == 0) {
-    //         // evt.target.innerText = "X"; //How can I add an image instead of an X?
-    //         // evt.target.innerHTML = <img src="../hw/x-rick.png" class="X">rick</img>; //Try innerHTML instead of innerText. Maybe check animate doc -- api.jquery.com/animate Give image a class so logic can check by class for winner
-    //         evt.target.style.fontSize = "30px";
-    //         player++;
-    //     }
-    //     else {
-    //         evt.target.innerText = "0";
-    //         evt.target.style.fontSize = "30px";
-    //         player++;
-    //     }
+    player = 0;
+    // let divs = $('.col-2');
+    $('.container').on("click", (evt) => { //api.jquery.com/on
+        // console.log(evt) //for testing
+        if (player % 2 == 0) {
+            // evt.target.innerText = "X"; //How can I add an image instead of an X?
+            // evt.target.innerHTML = <img src="../hw/x-rick.png" class="X">rick</img>; //Try innerHTML instead of innerText. Maybe check animate doc -- api.jquery.com/animate Give image a class so logic can check by class for winner
+            evt.target.style.fontSize = "30px";
+            player++;
+        }
+        else {
+            evt.target.innerText = "0";
+            evt.target.style.fontSize = "30px";
+            player++;
+        }
 
     //Need logic to quickly figure out all possibilities of winning and if a char is 3x in row. Don't need to check for winner till move 5. Try to find cleanest way possible with as few ifs as possible
     //Look into erase method to clear innerHTML and cycling through a loop with a button. Maybe don't use erase or remove, idk yet
