@@ -10,26 +10,57 @@ let square9 = $('square9');
 
 player = 0;
     let divs = $('.col-3');
-    $('#main-board').on("click", (evt) => { //api.jquery.com/on
+
+    console.log(divs);
+
+
+    $('#main-board').on("click", (evt) => { 
         // console.log(evt) //for testing
         if (player % 2 == 0) {
             // evt.target.innerText = "X"; 
             // evt.target.style.fontSize = "30px";
-            evt.target.innerHTML = "<img src='tinified/x-rick.png' class='X' alt='X Rick' />"; //Maybe check animate doc -- api.jquery.com/animate Give image a class so logic can check by class for winner
-            evt.target.style.backgroundColor = "rgb(75, 245, 66)";
-            
-            player++;
+            console.log(evt.target.innerHTML.includes("img"));
+        
+                // if (evt.target.classList.value.includes("X") || evt.target.classList.value.includes("O")) {
+                //     alert("Square is already filled!");
+                   
+                // } else {
+                //     evt.target.classList.add("X"); 
+                //     evt.target.setAttribute("onclick", "return false");
+                //     player++;
+                // }
+
+                evt.target.classList.add("X"); 
+                evt.target.setAttribute("onclick", "return false");
+                player++;
+              
         }
         else {
             // evt.target.innerText = "0";
             // evt.target.style.fontSize = "30px";
-            evt.target.innerHTML = "<img src='tinified/o-morty.png' class='O' alt='O Morty' />";
-            evt.target.style.backgroundColor = "rgb(255, 179, 0)";
-            
+            // while (player % 2 !== 0) {
+            //     if (evt.target.classList.value.includes("X") || evt.target.classList.value.includes("O")) {
+            //         alert("Square is already filled!");
+            //     } else {
+            //         evt.target.classList.add("O"); 
+                    
+            //         player++;
+            //     }
+            // }
+
+            evt.target.classList.add("O"); 
+            evt.target.setAttribute("onclick", "return false");
             player++;
+            
         }
     });
 
     //Add an alert box after game ends that says who won
 
     //Add a reset button at bottom
+
+
+
+    //Resources
+    //Maybe check animate doc -- api.jquery.com/animate Give image a class so logic can check by class for winner
+    //api.jquery.com/on
