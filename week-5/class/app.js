@@ -3,25 +3,25 @@
 
 // )
 
-$(function() { //The new document.ready()
-    //Deprecated
-    // $('.text').text('The DOM is now loaded');
+// $(function() { //The new document.ready()
+//     Deprecated
+//     $('.text').text('The DOM is now loaded');
 
-    // $('.text').on('mouseover', () => {
-    //     $('<p class="secondP">You hovered over the text</p>').appendTo('body');
-    // });
+//     $('.text').on('mouseover', () => {
+//         $('<p class="secondP">You hovered over the text</p>').appendTo('body');
+//     });
 
 
-    //Pure/Vanilla JS
-    // let divs = document.querySelectorAll('.col-2');
+//     Pure/Vanilla JS
+//     let divs = document.querySelectorAll('.col-2');
 
-    // for (let i = 0; i < divs.length; i++) {
-    //     divs[i].addEventListener('click', (evt) => {
-    //         // console.log(evt.target);
-    //         // console.log(evt.target.innerText);
-    //         evt.target.innerText = "X"; //Would have to flip between players and markers with a conditional statement and a counter i++
-    //     })
-    // }
+//     for (let i = 0; i < divs.length; i++) {
+//         divs[i].addEventListener('click', (evt) => {
+//             // console.log(evt.target);
+//             // console.log(evt.target.innerText);
+//             evt.target.innerText = "X"; //Would have to flip between players and markers with a conditional statement and a counter i++
+//         })
+//     }
 
 
     //jquery version for adding event listeners
@@ -84,4 +84,4 @@ $(function() { //The new document.ready()
 
 
     
-})
+});
