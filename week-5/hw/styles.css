@@ -6,7 +6,7 @@ body {
 
 h1 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     /* text-align: center; */
     /* text align center is not doing what I want*/
 }
@@ -23,7 +23,9 @@ h2 {
     left: 0px;
     top: 0px;
     z-index: -1;
-    /* Add background-image and background-size; */
+    /* background-image: url("/tinified/blips-chitz-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat; */
 }
 
 .overlay {
@@ -44,7 +46,12 @@ h2 {
     width: 100%;
 }
 
-
+/* #main-board {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+} */
 
 /* Game board option 1 */
 .col-3 {
@@ -72,7 +79,7 @@ tr {
 }
 
 .X {
-    background-color: rgb(75, 245, 66);
+    background-color: rgb(3, 223, 252);
     background-image: url("tinified/x-rick.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -83,6 +90,10 @@ tr {
     background-image: url("tinified/o-morty.png");
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.modal {
+    text-align: center;
 }
 
 

@@ -13,17 +13,18 @@
     
     <link rel="stylesheet" href="styles.css">
 
-    <title>Rick Tac Toe</title>
+    <title>Rick-Tac-Toe</title>
 </head>
 <body>
     <div class="hero">
         <img src="tinified/blips-chitz-bg.png"  class="img-fluid" style="background-color: RGB(147, 169, 156);"/>
     </div>
+    
 
     <div class="overlay">
         <div class="container">
             <div class="row">
-                <h1>Rick Tac Toe</h1>
+                <h1>Rick-Tac-Toe</h1>
             </div>
     
             <div class="row">
@@ -39,15 +40,17 @@
             </div>
     
             <div class="row">
-                Now I'm gonna go work on stuff in the garage. Don't bother me.
+                <p>Now I'm gonna go build stuff in the garage. Don't bother me.</p>
             </div>
-    
             <div class="row">
                 <i>*Burps</i>
             </div>
         </div>
         <br /><br />
     
+        <!-- Turn counter -->
+        <h6 id="turn-counter" class="text-center">Rick's turn</h6>
+
         <!-- Game board option 1 -->
         <div class="container" id="main-board">
             <div class="row">
@@ -113,6 +116,41 @@
             </table>
         </div> -->
     </div>
+
+    <!-- Modal for illegal move, option 2 from https://www.geeksforgeeks.org/how-to-fit-the-image-into-modal-popup-using-bootstrap/#:~:text=Images%20can%20be%20fitted%20in,can%20be%20inserted%20into%20it. -->
+    <img src="/tinified/cromulon.png" data-toggle="modal" data-target="#modal" />
+
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- w-100 class so that header
+                        div covers 100% width of parent div -->
+                        <h5 class="modal-title w-100" id="exampleModalLabel">
+                            BOO, NOT COOL. TRY ANOTHER SQUARE.
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">
+                                ×
+                            </span>
+                        </button>
+                    </div>
+        
+                    <!--Modal body with image-->
+                    <div class="modal-body">
+                        <img src="/tinified/cromulon.png" />
+                    </div>
+        
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+           
 
     
 
