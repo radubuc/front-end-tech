@@ -74,15 +74,15 @@ tr {
 .X, .O {
     display: block;
     width: 100%;
-    height: 100%
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
 
 }
 
 .X {
-    background-color: rgb(3, 223, 252);
+    background-color: rgb(3, 223, 252); 
     background-image: url("tinified/x-rick.png");
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .O {

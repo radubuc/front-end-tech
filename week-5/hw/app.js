@@ -1,12 +1,12 @@
-// let square1 = $('square1');
-// let square2 = $('square2');
-// let square3 = $('square3');
-// let square4 = $('square4');
-// let square5 = $('square5');
-// let square6 = $('square6');
-// let square7 = $('square7');
-// let square8 = $('square8');
-// let square9 = $('square9');
+// let sq1 = $('square1');
+// let sq2 = $('square2');
+// let sq3 = $('square3');
+// let sq4 = $('square4');
+// let sq5 = $('square5');
+// let sq6 = $('square6');
+// let sq7 = $('square7');
+// let sq8 = $('square8');
+// let sq9 = $('square9');
 
 // //Vanilla JS
 // // player = 0;
@@ -72,7 +72,7 @@
 //     // });
 
 
-// //Turn checker logic and change counter above board
+//Turn checker logic 
 var turn = 1;
 
 $("button").on("click", (evt) => {
@@ -94,76 +94,65 @@ $("button").on("click", (evt) => {
         
 });
 
-//Check for all win possibilities --use green rgb (75, 245, 66) for win
+//Check for all win possibilities --use green rgb(75, 245, 66) for win https://www.geeksforgeeks.org/create-a-tic-tac-toe-game-using-jquery/
 function check(symbol) {
-    if ($(".sq1").hasClass(symbol) &&
-        $(".sq2").hasClass(symbol) &&
-        $(".sq3").hasClass(symbol))
-    {
-        $(".sq1").css("color", "green");
-        $(".sq2").css("color", "green");
-        $(".sq3").css("color", "green");
+    if ($(".sq1").hasClass(symbol) && $(".sq2").hasClass(symbol) && $(".sq3").hasClass(symbol)) {
+        $(".sq1").css("color", "rgb(75, 245, 66)"); $(".sq2").css("color", "rgb(75, 245, 66)"); $(".sq3").css("color", "rgb(75, 245, 66)");
         return true;
-    } else if ($(".sq4").hasClass(symbol)
-            && $(".sq5").hasClass(symbol)
-            && $(".sq6").hasClass(symbol))
-    {
-        $(".sq4").css("color", "green");
-        $(".sq5").css("color", "green");
-        $(".sq6").css("color", "green");
+
+    } else if ($(".sq4").hasClass(symbol) && $(".sq5").hasClass(symbol) && $(".sq6").hasClass(symbol)) {
+        $(".sq4").css("color", "rgb(75, 245, 66)"); $(".sq5").css("color", "rgb(75, 245, 66)"); $(".sq6").css("color", "rgb(75, 245, 66)");
         return true;
-    } else if ($(".sq7").hasClass(symbol)
-            && $(".sq8").hasClass(symbol)
-            && $(".sq9").hasClass(symbol))
-    {
-        $(".sq7").css("color", "green");
-        $(".sq8").css("color", "green");
-        $(".sq9").css("color", "green");
+
+    } else if ($(".sq7").hasClass(symbol) && $(".sq8").hasClass(symbol) && $(".sq9").hasClass(symbol)) {
+        $(".sq7").css("color", "rgb(75, 245, 66)"); $(".sq8").css("color", "rgb(75, 245, 66)"); $(".sq9").css("color", "rgb(75, 245, 66)");
         return true;
-    } else if ($(".sq1").hasClass(symbol)
-            && $(".sq4").hasClass(symbol)
-            && $(".sq7").hasClass(symbol))
-    {
-        $(".sq1").css("color", "green");
-        $(".sq4").css("color", "green");
-        $(".sq7").css("color", "green");
+
+    } else if ($(".sq1").hasClass(symbol) && $(".sq4").hasClass(symbol) && $(".sq7").hasClass(symbol)) {
+        $(".sq1").css("color", "rgb(75, 245, 66)"); $(".sq4").css("color", "rgb(75, 245, 66)"); $(".sq7").css("color", "rgb(75, 245, 66)");
         return true;
-    } else if ($(".sq2").hasClass(symbol)
-            && $(".sq5").hasClass(symbol)
-            && $(".sq8").hasClass(symbol))
-    {
-        $(".sq2").css("color", "green");
-        $(".sq5").css("color", "green");
-        $(".sq8").css("color", "green");
+
+    } else if ($(".sq2").hasClass(symbol) && $(".sq5").hasClass(symbol) && $(".sq8").hasClass(symbol)) {
+        $(".sq2").css("color", "rgb(75, 245, 66)"); $(".sq5").css("color", "rgb(75, 245, 66)"); $(".sq8").css("color", "rgb(75, 245, 66)");
         return true;
-    } else if ($(".sq3").hasClass(symbol)
-            && $(".sq6").hasClass(symbol)
-            && $(".sq9").hasClass(symbol))
-    {
-        $(".sq3").css("color", "green");
-        $(".sq6").css("color", "green");
-        $(".sq9").css("color", "green");
+
+    } else if ($(".sq3").hasClass(symbol) && $(".sq6").hasClass(symbol) && $(".sq9").hasClass(symbol)) {
+        $(".sq3").css("color", "rgb(75, 245, 66)"); $(".sq6").css("color", "rgb(75, 245, 66)"); $(".sq9").css("color", "rgb(75, 245, 66)");
         return true;
-    } else if ($(".sq1").hasClass(symbol)
-            && $(".sq5").hasClass(symbol)
-            && $(".sq9").hasClass(symbol))
-    {
-        $(".sq1").css("color", "green");
-        $(".sq5").css("color", "green");
-        $(".sq9").css("color", "green");
+
+    } else if ($(".sq1").hasClass(symbol) && $(".sq5").hasClass(symbol) && $(".sq9").hasClass(symbol)) {
+        $(".sq1").css("color", "rgb(75, 245, 66)"); $(".sq5").css("color", "rgb(75, 245, 66)"); $(".sq9").css("color", "rgb(75, 245, 66)");
         return true;
-    } else if ($(".sq3").hasClass(symbol)
-            && $(".sq5").hasClass(symbol)
-            && $(".sq7").hasClass(symbol))
-    {
-        $(".sq3").css("color", "green");
-        $(".sq5").css("color", "green");
-        $(".sq7").css("color", "green");
+
+    } else if ($(".sq3").hasClass(symbol) && $(".sq5").hasClass(symbol) && $(".sq7").hasClass(symbol)) {
+        $(".sq3").css("color", "rgb(75, 245, 66)"); $(".sq5").css("color", "rgb(75, 245, 66)"); $(".sq7").css("color", "rgb(75, 245, 66)");
         return true;
+        
     } else {
         return false;
     }
 }
+
+// Reset button functionality
+function reset() {
+    $("#turn-counter").text("Rick's turn");
+    // $("#turn-counter").css("background-color", "transparent"); //I don't think I need this because my turn counter doesn't change bg color ever
+    $(".r").removeClass("X");
+    $(".r").removeClass("O");
+    turn = 1;
+  
+    // Reset Colors
+    $(".sq1").css("background-color", "transparent");
+    $(".sq2").css("background-color", "transparent");
+    $(".sq3").css("background-color", "transparent");
+    $(".sq4").css("background-color", "transparent");
+    $(".sq5").css("background-color", "transparent");
+    $(".sq6").css("background-color", "transparent");
+    $(".sq7").css("background-color", "transparent");
+    $(".sq8").css("background-color", "transparent");
+    $(".sq9").css("background-color", "transparent");
+  
+ }
 
 
 
