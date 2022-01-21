@@ -108,16 +108,22 @@ function reset() {
 //     // });
 
 
-//Turn checker logic 
-// var turn = 1;
+//Turn checker logic - Geeksforgeeks
+var turn = 1;
 
-// $("button").on("click", (evt) => {
-//     if (turn == 1) {
-//         $("turn-counter").text("Morty's turn");
-//     } else {
-//         $("#turn-counter").text("Rick's turn");
-//     }
-// });
+$("button").on("click", (evt) => {
+    if (turn == 1) {
+        $("#turn-counter").text("Rick's turn");
+
+        $(this).addClass("X");
+        turn = 2;
+    } else {
+        $("#turn-counter").text("Morty's turn");
+
+        $(this).addClass("O");
+        turn = 1;
+    }
+});
 
 // //Check for illegal moves
 // $("button").on("click", (evt) => {
@@ -178,7 +184,7 @@ function reset() {
 
 //     //Add an alert box or modal box after game ends that says who won
 
-//     //Finish reset button at bottom
+//     //Finish reset button at bottom. Try refreshing browser on click instead: https://stackoverflow.com/questions/5404839/how-can-i-refresh-a-page-with-jquery
 
 //Worse case scenario, just submit what I have
 
