@@ -180,8 +180,6 @@ $("button").on("click", (evt) => {
 
 
 
-
-
 //     //Add an alert box or modal box after game ends that says who won
 
 //     //Finish reset button at bottom. Try refreshing browser on click instead: https://stackoverflow.com/questions/5404839/how-can-i-refresh-a-page-with-jquery
