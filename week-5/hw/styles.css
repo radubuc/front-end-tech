@@ -87,9 +87,7 @@ tr {
 .O {
     background-color: rgb(255, 179, 0);
     background-image: url("tinified/o-morty.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+} 
 
 .modal {
     text-align: center;
