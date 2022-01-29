@@ -76,7 +76,7 @@ class DOMManager {
     static addRoom(id) {
         for (let house of this.houses) { //Loop through array to find house
             if (house._id == id) { //If current house id matches house id we passed in...
-                house.rooms.push(new Room($(`#${house._id}-room-name`).val(), $(`#${house._id}-room-area`).val())); //Push a new room (with name and area) to rooms array. Breakdown of symbols: $() jQuery, `${}` template literal, # find by id
+                house.rooms.push(new Room($(`#${house._id}-room-name`).val(), $(`#${house._id}-room-area`).val())) //Push a new room (with name and area) to rooms array. Breakdown of symbols: $() jQuery, `${}` template literal, # find by id
                 HouseService.updateHouse(house) //Take house whose new room I just added to rooms array and send update request to API to save new data
                     .then(() => {
                         console.log("1st .then in addRoom function");
@@ -85,6 +85,23 @@ class DOMManager {
                     
                     .then((houses) => this.render(houses)); //Rerenders houses after update
                     console.log("2nd .then in addRoom function")
+            }
+        }
+    }
+
+    static deleteRoom(houseId, roomId) {
+        for (let house of this.houses) { //When we find the right house...
+            if (house._id == houseId) { //(Means house id = house id passed in)
+                for (let room of house.rooms) { //and when we find the right room...
+                    if (room._id == roomId) { //(Means room id = room id passed in)
+                        house.rooms.splice(house.rooms.indexOf(room), 1); //Removes element from rooms array
+                        HouseService.updateHouse(house)
+                            .then(() => {
+                                return HouseService.getAllHouses();
+                            })
+                            .then((houses) => this.render(houses));
+                    }
+                }
             }
         }
     }
@@ -118,7 +135,7 @@ class DOMManager {
             ); // Stopped working at timestamp 22 min in video, before adding Delete button, card body, and Add button divs above. Update: Works suddenly \_(o_O)_/
 
             for (let room of house.rooms) { //House refers to current iterations' house
-                $(`#${house._id}`).find('card-body').append(
+                $(`#${house._id}`).find('.card-body').append(
                     `<p>
                         <span id="name-${room._id}"><strong>Name: </strong> ${room.name}</span>
                         <span id="area-${room._id}"><strong>Area: </strong> ${room.area}</span>
