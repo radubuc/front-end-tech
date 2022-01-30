@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cat API Project</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+    <div id="new-image" class="jumbotron">
+        <h1 class=text-center>The Cat API</h1><br />
+
+        <h2>Upload a Cat Image (jpg/png/gif)</h2>
+
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="new-cat-image" name="file">
+            <br /><br />
+            <button id="upload-image" class="btn btn-primary">Upload</button>
+        </form>
+        <br /><br />
+
+        <p>Request Status:</p>
+        <div id="status"></div>
+        <br /><br />
+        <p>API Response:</p>
+        <div id="response"></div>
+        
+
+
+
+    </div>
+    
+    <!-- <div id="app">
+                
+    </div> -->
+    
+
+
+
+
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
