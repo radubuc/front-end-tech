@@ -78,8 +78,8 @@ class DOMManager {
             if (house._id == id) { //If current house id matches house id we passed in...
                 house.rooms.push(new Room($(`#${house._id}-room-name`).val(), $(`#${house._id}-room-area`).val())) //Push a new room (with name and area) to rooms array. Breakdown of symbols: $() jQuery, `${}` template literal, # find by id
                 HouseService.updateHouse(house) //Take house whose new room I just added to rooms array and send update request to API to save new data
-                    .then(() => {
-                        console.log("1st .then in addRoom function");
+                    .then((data) => {
+                        console.log(data);
                         return HouseService.getAllHouses(); //Gets all houses
                     })
                     
@@ -116,7 +116,7 @@ class DOMManager {
                         <h2>${house.name}</h2>
                         <button class="btn btn-danger" onclick="DOMManager.deleteHouse('${house._id}')">Delete House</button>
                     </div> 
-                    <div class="card-body>
+                    <div class="card-body">
                         <div class="card">
                             <div class="row">
                                 <div class="col-sm">
@@ -139,7 +139,7 @@ class DOMManager {
                     `<p>
                         <span id="name-${room._id}"><strong>Name: </strong> ${room.name}</span>
                         <span id="area-${room._id}"><strong>Area: </strong> ${room.area}</span>
-                        <button class="btn btn-danger" onclick="DOMManager.deleteRoom('${house._id}', '${room._id}')">Delete Room</button>`
+                        <button class="btn btn-danger" onclick="DOMManager.deleteRoom('${house._id}', '${room._id}')">Delete Room</button></p>`
                 );
             }
         }
