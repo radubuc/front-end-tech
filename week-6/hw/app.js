@@ -1,33 +1,91 @@
-import fetch from "node-fetch";
-const url = "https://jsonplaceholder.typicode.com/todos/1";
+// import fetch from "node-fetch";
+const url = "https://api.thecatapi.com/v1/images/search?limit=10";
+const headers = {
+    "x-api-key": 'efa41676-51c2-4291-b4f6-db182903776d',
+};
 
-fetch(url)
+fetch(url, headers)
   .then((response) => response.json())
   .then((json) => console.log(json))
   .catch((err) => console.log(err));
+
+$("#upload-form").on("submit", (evt) => {
+    evt.preventDefault();
+    console.log("catFile", evt.currentTarget[0].files[0]); 
+    let catFile = evt.currentTarget[0].files[0];
+    postCatPic(catFile);
+});
+
+function postCatPic(catFile) {
+    const getData = async (url,data) => {
+        const res = await fetch(url, {
+          method: 'POST',
+          body: data,
+          headers: headers,
+        });
+        const json = await res.json();
+        console.log(json);
+      };
+      const url = "https://api.thecatapi.com/v1/images/upload";
+      const data = JSON.stringify({
+        file: catFile,
+      });
+      getData(url, data);
+}
+
+//From Cat API docs
+var http = require("https");
+const { FetchError } = require("node-fetch");
+
+var options = {
+  "method": "POST",
+  "hostname": "api.thecatapi.com",
+  "port": null,
+  "path": "/v1/images/upload",
+  "headers": {
+    "content-type": "multipart/form-data;",
+    "x-api-key": "efa41676-51c2-4291-b4f6-db182903776d"
+  }
+};
+
+var req = http.request(options, function (res) {
+  var chunks = [];
+
+  res.on("data", function (chunk) {
+    chunks.push(chunk);
+  });
+
+  res.on("end", function () {
+    var body = Buffer.concat(chunks);
+    console.log(body.toString());
+  });
+});
+
+req.end();
+
 
 // var require: NodeRequire
 // (id: string) => any
 
 // const fetch = require('node-fetch');
 
-require("dotenv").config();
-const CAT_API_KEY = process.env.API_KEY;
+// require("dotenv").config();
+// const CAT_API_KEY = process.env.API_KEY;
 
 
-const getData = async (url,headers) => { //https://www.realpythonproject.com/a-cheat-sheet-for-javascripts-fetch-api/
-    const res = await fetch(url,{
-        headers: headers
-    });
-    const json = await res.json();
-    console.log(json);
-    };
-    const url =
-    "https://api.thecatapi.com/v1/images/search";
-    const headers = {
-        "x-api-key": 'efa41676-51c2-4291-b4f6-db182903776d',
-    };
-    getData(url,headers);
+// const getData = async (url,headers) => { //https://www.realpythonproject.com/a-cheat-sheet-for-javascripts-fetch-api/
+//     const res = await fetch(url,{
+//         headers: headers
+//     });
+//     const json = await res.json();
+//     console.log(json);
+//     };
+//     const url =
+//     "https://api.thecatapi.com/v1/images/search";
+//     const headers = {
+//         "x-api-key": 'efa41676-51c2-4291-b4f6-db182903776d',
+//     };
+//     getData(url,headers);
 
 
 // class CatService {
@@ -128,5 +186,11 @@ const getData = async (url,headers) => { //https://www.realpythonproject.com/a-c
 
 //MDN Request.headers
 // https://developer.mozilla.org/en-US/docs/Web/API/Request/headers
+
+// MDN Fetch
+// https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
+//MDN Using Files from Web App
+//https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications 
 
 
