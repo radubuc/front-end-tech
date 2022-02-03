@@ -1,14 +1,46 @@
-class CatService {
-    static url = 'https://api.thecatapi.com/v1/images/search'; //https://docs.thecatapi.com/api-reference/images/images-upload 
-    headers['x-api-key'] = efa41676-51c2-4291-b4f6-db182903776d; //My API key that was emailed to me. See https://docs.thecatapi.com/authentication
+import fetch from "node-fetch";
+const url = "https://jsonplaceholder.typicode.com/todos/1";
 
-    static getAllPublicImages() { //GET ALL
-        return $.get(this.url);
-    }
+fetch(url)
+  .then((response) => response.json())
+  .then((json) => console.log(json))
+  .catch((err) => console.log(err));
 
-    static getMyImages(apiKey) { //GET
-        return $.get(this.url + `/${apiKey}`);
-    }
+// var require: NodeRequire
+// (id: string) => any
+
+// const fetch = require('node-fetch');
+
+require("dotenv").config();
+const CAT_API_KEY = process.env.API_KEY;
+
+
+const getData = async (url,headers) => { //https://www.realpythonproject.com/a-cheat-sheet-for-javascripts-fetch-api/
+    const res = await fetch(url,{
+        headers: headers
+    });
+    const json = await res.json();
+    console.log(json);
+    };
+    const url =
+    "https://api.thecatapi.com/v1/images/search";
+    const headers = {
+        "x-api-key": 'efa41676-51c2-4291-b4f6-db182903776d',
+    };
+    getData(url,headers);
+
+
+// class CatService {
+//     static url = 'https://api.thecatapi.com/v1/images/search'; //https://docs.thecatapi.com/api-reference/images/images-upload 
+//     headers['x-api-key'] = "efa41676-51c2-4291-b4f6-db182903776d"; //My API key that was emailed to me. See https://docs.thecatapi.com/authentication
+
+//     static getAllPublicImages() { //GET ALL
+//         return $.get(this.url);
+//     }
+
+//     static getMyImages(apiKey) { //GET
+//         return $.get(this.url + `/${apiKey}`);
+//     }
    
 
 
@@ -74,3 +106,27 @@ class CatService {
 
 //API keys in general
 // https://swagger.io/docs/specification/authentication/api-keys/ 
+
+//API Cheatsheet
+// https://www.realpythonproject.com/a-cheat-sheet-for-javascripts-fetch-api/ 
+
+//The Coding Train
+// https://www.youtube.com/watch?v=ecT42O6I_WI 
+
+//Also Web Dev Simplified on Youtube
+
+// https://github.com/node-fetch/node-fetch/issues/1000 
+
+//Fetch Docs
+// https://www.npmjs.com/package/node-fetch 
+
+//Google Maps API example
+// https://developers.google.com/maps/documentation/javascript/get-api-key
+
+// MDN Headers 
+// https://developer.mozilla.org/en-US/docs/Web/API/Headers
+
+//MDN Request.headers
+// https://developer.mozilla.org/en-US/docs/Web/API/Request/headers
+
+
