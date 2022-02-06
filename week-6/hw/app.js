@@ -1,9 +1,40 @@
 // import fetch from "node-fetch";
-const url = "https://api.thecatapi.com/v1/images/search?limit=10";
-const headers = {
-    // "content-type": "multipart/form-data;",
-    "x-api-key": 'efa41676-51c2-4291-b4f6-db182903776d'
-};
+// const url = "https://api.thecatapi.com/v1/images/search?limit=10";
+// const headers = {
+//     // "content-type": "multipart/form-data;",
+//     "x-api-key": 'efa41676-51c2-4291-b4f6-db182903776d'
+// };
+  
+  //Get Top 25 Public Images - From Official Docs
+  var settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://api.thecatapi.com/v1/images/search?limit=25",
+	"method": "GET",
+	"headers": {
+	  "x-api-key": "efa41676-51c2-4291-b4f6-db182903776d"
+	}
+  }
+  
+  $.ajax(settings).done(function (response) {
+	console.log(`Get top 25 public images:`, response);
+  });
+
+//Get Top 25 Public Images - From Postman docs
+// var settings = {
+// 	"url": "https://api.thecatapi.com/v1/images/search?limit=25",
+// 	"method": "GET",
+// 	"timeout": 0,
+// 	"headers": {
+// 	  "Content-Type": "application/json",
+// 	  "x-api-key": "efa41676-51c2-4291-b4f6-db182903776d"
+// 	},
+//   };
+  
+//   $.ajax(settings).done(function (response) {
+// 	console.log(`Get top 25 public images:`, response);
+//   });
+
 
 // fetch(url, headers)
 //   .then((response) => response.json())
@@ -52,19 +83,17 @@ var settings = {
 }
 
 $.ajax(settings).done(function (response) {
-  console.log(response);
+  console.log(`Get your 10 latest uploaded images:`, response);
 });
 
 
 //Delete my uploaded image
-
 $("#delete-image-form").on("submit", (evt) => {
   evt.preventDefault();
   // console.log("catId", evt.currentTarget[`${id}`].files); 
   let id = evt.currentTarget.files[id];
   deleteImage(id);
 });
-
 
 function deleteImage(id) {
   var picURL = `https://api.thecatapi.com/v1/images/${id}`
@@ -78,10 +107,11 @@ function deleteImage(id) {
     },
   };
 
-  $.ajax(settings).done(function (response) {
-    console.log(response);
-});
+	$.ajax(settings).done(function (response) {
+    	console.log(`Status of image with ${id}:`, response);
+	});
 }
+
 
 
 

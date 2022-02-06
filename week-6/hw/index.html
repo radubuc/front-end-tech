@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body class="container">
-    <!-- <img src="images/cat-bg.jpg" style="background-size: cover; background-repeat: no-repeat; >
-
-    <div style="background-size: cover; background-repeat: no-repeat; background-image: url(https://nypost.com/wp-content/uploads/sites/2/2017/12/istock-472306714.jpg?quality=80&strip=all"></div> -->
-
-    <!-- Try this: -->
-    <!-- <div class="hero__image" style="background-image: url('~/CMSTemplates/Cedars/images/headers/header-careers.jpg'); background-repeat: no-repeat; background-size: cover;"></div> -->
-
+    <br />
     <div id="new-image" class="jumbotron">
         <h1 class="text-center">Cat CRUD</h1>
-        <p class="text-center">This app interacts with <a href="https://thecatapi.com/" target="_blank">The Cat API*</a>, created by <i><a href="https://thatapicompany.com/our-apis/" target="_blank">That API Company</a></i>.</p>
+        <p class="text-center">This app interacts with <a href="https://thecatapi.com/" target="_blank">The Cat API*</a>, created by <a href="https://thatapicompany.com/our-apis/" target="_blank">That API Company</a>.</p><br />
+        
+        <h2>Get top 25 public images</h2>
+        <p>See console for status and response</p>
+        <hr />
+        
+        <h2>Get your 10 latest uploaded images</h2>
+        <p>See console for status and response</p>
+        <hr />
         
         <h2>Upload a Cat Image (jpg/png/gif)</h2>
         <p>See The Cat API's upload guidelines <a href="https://thecatapi.com/privacy">here</a>.</p>
@@ -27,7 +29,8 @@
             <br /><br />
             <input type="submit" id="submit" name="Submit" class="btn btn-primary">
         </form>
-        <br /><br />
+        <br />
+        <p>See console for status and response</p>
         <hr />
 
         <h2>Delete your Cat Image</h2>
@@ -36,32 +39,17 @@
             <br /><br />
             <input type="submit" id="delete" name="delete" class="btn btn-primary">
         </form>
-        <br /><br />
+        <br />
 
-        <p>Request Status:</p>
-        <div id="status">See console</div>
-        <br /><br />
-        <p>API Response:</p>
-        <div id="response">See console</div>
+        <p>See console for status and response</p><br />
 
         <p class="text-center">*There is no PUT operation associated with this API.</p>
         
-
-
-
     </div>
     
-    <!-- <div id="app">
-                
-    </div> -->
-    
-
-
-
-
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="app.js"></script>
+    <script src="app-final.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>

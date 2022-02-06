@@ -1,54 +1,89 @@
-//Get public cat images, limit 10
-const url = "https://api.thecatapi.com/v1/images/search?limit=10";
 const headers = {
     "x-api-key": 'efa41676-51c2-4291-b4f6-db182903776d',
 };
 
-//Upload cat image
-$("#upload-form").on("submit", (evt) => {
-    evt.preventDefault();
-    console.log("catFile", evt.currentTarget[0].files); 
-    let catFile = evt.currentTarget[0].files[0];
-    postCatPic(catFile);
+//Get top 25 public cat images
+var settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://api.thecatapi.com/v1/images/search?limit=25",
+	"method": "GET",
+	"headers": {
+	  "x-api-key": "efa41676-51c2-4291-b4f6-db182903776d"
+	}
+  }
+  
+  $.ajax(settings).done(function (response) {
+	console.log(`Get top 25 public images:`, response);
+  });
+
+//Upload cat image - Uses jQuery and Fetch
+$("#upload-image-form").on("submit", (evt) => {
+  evt.preventDefault();
+  // console.log("catFile", evt.currentTarget[0].files); 
+  let catFile = evt.currentTarget[0].files[0];
+  postCatPic(catFile);
 });
 
-//Uses Fetch
 function postCatPic(catFile) {
-    const getData = async (url,data) => {
-        const req = await fetch(url, {
-          method: 'POST',
-          body: data,
-          headers: headers,
-        });
-        const json = await req.json(); 
-        console.log(json);
-      };
-      const url = "https://api.thecatapi.com/v1/images/upload";
+  const getData = async (url,data) => {
+      const req = await fetch(url, {
+        method: 'POST',
+        body: data,
+        headers: headers,
+      });
+      const json = await req.json(); 
+      console.log(json);
+    };
+    const url = "https://api.thecatapi.com/v1/images/upload";
 
-      var data = new FormData()
-      data.append('file', catFile)
-      getData(url, data);
+    var data = new FormData()
+    data.append('file', catFile)
+    data.append('sub_id', 'test1')
+    getData(url, data);
 }
 
-//Get my cat images
+//Get my uploaded images - Uses AJAX
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.thecatapi.com/v1/images/?limit=10",
+  "method": "GET",
+  "headers": {
+    "x-api-key": "efa41676-51c2-4291-b4f6-db182903776d"
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(`Get your 10 latest uploaded images:`, response);
+});
 
 
+//Delete my uploaded image
+$("#delete-image-form").on("submit", (evt) => {
+  evt.preventDefault();
+  // console.log("catId", evt.currentTarget[`${id}`].files); 
+  let id = evt.currentTarget.files[id];
+  deleteImage(id);
+});
 
+function deleteImage(id) {
+  var picURL = `https://api.thecatapi.com/v1/images/${id}`
+  var settings = {
+    "url": picURL,
+    "method": "DELETE",
+    "timeout": 0,
+    "headers": {
+      "Content-Type": "application/json",
+      "x-api-key": "efa41676-51c2-4291-b4f6-db182903776d"
+    },
+  };
 
+	$.ajax(settings).done(function (response) {
+    	console.log(`Status of image with ${id}:`, response);
+	});
+}
 
-//Examples, etc
-// class CatService {
-//     static url = 'https://api.thecatapi.com/v1/images/search'; //Official docs
-//     headers['x-api-key'] = "efa41676-51c2-4291-b4f6-db182903776d"; //My API key that was emailed to me. See https://docs.thecatapi.com/authentication
-
-//     static getAllPublicImages() { //GET ALL
-//         return $.get(this.url);
-//     }
-
-//     static getMyImages(apiKey) { //GET
-//         return $.get(this.url + `/${apiKey}`);
-//     }
-   
 
 
 
