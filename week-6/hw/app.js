@@ -2,7 +2,7 @@
 const url = "https://api.thecatapi.com/v1/images/search?limit=10";
 const headers = {
     // "content-type": "multipart/form-data;",
-    "x-api-key": 'efa41676-51c2-4291-b4f6-db182903776d',
+    "x-api-key": 'efa41676-51c2-4291-b4f6-db182903776d'
 };
 
 // fetch(url, headers)
@@ -10,7 +10,8 @@ const headers = {
 //   .then((json) => console.log(json))
 //   .catch((err) => console.log(err));
 
-$("#upload-form").on("submit", (evt) => {
+//Upload cat image
+$("#upload-image-form").on("submit", (evt) => {
     evt.preventDefault();
     console.log("catFile", evt.currentTarget[0].files); 
     let catFile = evt.currentTarget[0].files[0];
@@ -31,12 +32,50 @@ function postCatPic(catFile) {
 
       var data = new FormData()
       data.append('file', catFile)
+      data.append('sub_id', 'test1')
 
     //   const data = JSON.stringify({
     //     file: catFile,
     //   });
       getData(url, data);
 }
+
+//Get my uploaded images
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.thecatapi.com/v1/images/?limit=10",
+  "method": "GET",
+  "headers": {
+    "x-api-key": "efa41676-51c2-4291-b4f6-db182903776d"
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+
+
+//Delete my uploaded 
+
+function deleteImage(id) {
+  var picURL = `https://api.thecatapi.com/v1/images/${id}`
+  var settings = {
+    "url": picURL,
+    "method": "DELETE",
+    "timeout": 0,
+    "headers": {
+      "Content-Type": "application/json",
+      "x-api-key": "efa41676-51c2-4291-b4f6-db182903776d"
+    },
+  };
+
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+});
+}
+
+
 
 //From Cat API docs
 // var http = require("https");
@@ -164,6 +203,9 @@ function postCatPic(catFile) {
 
 
 //Resources
+//The Cat API Official docs
+// https://docs.thecatapi.com/api-reference/images/images-upload  
+
 //The Cat API, Postman
 // https://documenter.getpostman.com/view/5578104/RWgqUxxh 
 

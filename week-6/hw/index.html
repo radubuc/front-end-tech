@@ -20,19 +20,26 @@
 
         <h2>Upload a Cat Image (jpg/png/gif)</h2>
 
-        <form id="upload-form" enctype="multipart/form-data">
+        <form id="upload-image-form" enctype="multipart/form-data">
             <input type="file" id="new-cat-image" name="file">
             <br /><br />
-            <!-- <button id="upload-image" class="btn btn-primary">Upload</button> -->
             <input type="submit" id="submit" name="Submit" class="btn btn-primary">
+        </form>
+        <br /><br />
+        <hr />
+
+        <form id="delete-image-form" enctype="multipart/form-data">
+            <input type="text" id="delete-cat-image" name="text" placeholder="Enter ID of image to delete" width="">
+            <br /><br />
+            <input type="submit" id="delete" name="delete" class="btn btn-primary">
         </form>
         <br /><br />
 
         <p>Request Status:</p>
-        <div id="status"></div>
+        <div id="status">See console</div>
         <br /><br />
         <p>API Response:</p>
-        <div id="response"></div>
+        <div id="response">See console</div>
         
 
 

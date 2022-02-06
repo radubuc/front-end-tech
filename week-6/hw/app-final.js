@@ -1,8 +1,10 @@
+//Get public cat images, limit 10
 const url = "https://api.thecatapi.com/v1/images/search?limit=10";
 const headers = {
     "x-api-key": 'efa41676-51c2-4291-b4f6-db182903776d',
 };
 
+//Upload cat image
 $("#upload-form").on("submit", (evt) => {
     evt.preventDefault();
     console.log("catFile", evt.currentTarget[0].files); 
@@ -10,6 +12,7 @@ $("#upload-form").on("submit", (evt) => {
     postCatPic(catFile);
 });
 
+//Uses Fetch
 function postCatPic(catFile) {
     const getData = async (url,data) => {
         const req = await fetch(url, {
@@ -27,11 +30,15 @@ function postCatPic(catFile) {
       getData(url, data);
 }
 
+//Get my cat images
 
 
 
+
+
+//Examples, etc
 // class CatService {
-//     static url = 'https://api.thecatapi.com/v1/images/search'; //https://docs.thecatapi.com/api-reference/images/images-upload 
+//     static url = 'https://api.thecatapi.com/v1/images/search'; //Official docs
 //     headers['x-api-key'] = "efa41676-51c2-4291-b4f6-db182903776d"; //My API key that was emailed to me. See https://docs.thecatapi.com/authentication
 
 //     static getAllPublicImages() { //GET ALL
@@ -47,6 +54,9 @@ function postCatPic(catFile) {
 
 
 //Resources
+//The Cat API Official docs
+// https://docs.thecatapi.com/api-reference/images/images-upload  
+
 //The Cat API, Postman
 // https://documenter.getpostman.com/view/5578104/RWgqUxxh 
 
