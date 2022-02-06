@@ -13,7 +13,7 @@ const headers = {
 //Upload cat image
 $("#upload-image-form").on("submit", (evt) => {
     evt.preventDefault();
-    console.log("catFile", evt.currentTarget[0].files); 
+    // console.log("catFile", evt.currentTarget[0].files); 
     let catFile = evt.currentTarget[0].files[0];
     postCatPic(catFile);
 });
@@ -56,7 +56,15 @@ $.ajax(settings).done(function (response) {
 });
 
 
-//Delete my uploaded 
+//Delete my uploaded image
+
+$("#delete-image-form").on("submit", (evt) => {
+  evt.preventDefault();
+  // console.log("catId", evt.currentTarget[`${id}`].files); 
+  let id = evt.currentTarget.files[id];
+  deleteImage(id);
+});
+
 
 function deleteImage(id) {
   var picURL = `https://api.thecatapi.com/v1/images/${id}`

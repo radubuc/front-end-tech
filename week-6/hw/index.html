@@ -16,9 +16,11 @@
     <!-- <div class="hero__image" style="background-image: url('~/CMSTemplates/Cedars/images/headers/header-careers.jpg'); background-repeat: no-repeat; background-size: cover;"></div> -->
 
     <div id="new-image" class="jumbotron">
-        <h1 class=text-center>Cat CRUD</h1><br />
-
+        <h1 class="text-center">Cat CRUD</h1>
+        <p class="text-center">This app interacts with <a href="https://thecatapi.com/" target="_blank">The Cat API*</a>, created by <i><a href="https://thatapicompany.com/our-apis/" target="_blank">That API Company</a></i>.</p>
+        
         <h2>Upload a Cat Image (jpg/png/gif)</h2>
+        <p>See The Cat API's upload guidelines <a href="https://thecatapi.com/privacy">here</a>.</p>
 
         <form id="upload-image-form" enctype="multipart/form-data">
             <input type="file" id="new-cat-image" name="file">
@@ -28,8 +30,9 @@
         <br /><br />
         <hr />
 
+        <h2>Delete your Cat Image</h2>
         <form id="delete-image-form" enctype="multipart/form-data">
-            <input type="text" id="delete-cat-image" name="text" placeholder="Enter ID of image to delete" width="">
+            <input type="text" id="delete-cat-image" name="text" placeholder="Enter ID of image to delete" style="width: 200px">
             <br /><br />
             <input type="submit" id="delete" name="delete" class="btn btn-primary">
         </form>
@@ -40,6 +43,8 @@
         <br /><br />
         <p>API Response:</p>
         <div id="response">See console</div>
+
+        <p class="text-center">*There is no PUT operation associated with this API.</p>
         
 
 
